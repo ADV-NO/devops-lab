@@ -3,7 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const { formatPrice, sum, applyDiscount } = require('../src/app.js');
 test('formatPrice 加上千分位與幣別', () => {
-  assert.strictEqual(formatPrice(1234567), 'TWD 1,234,568');
+  assert.strictEqual(formatPrice(1234567), 'TWD 1,234,567');
 });
 test('formatPrice 拒絕非數字', () => {
   assert.throws(() => formatPrice('abc'), TypeError);
